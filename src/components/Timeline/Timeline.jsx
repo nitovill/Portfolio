@@ -8,9 +8,10 @@ import TimelineDot from "@material-ui/lab/TimelineDot";
 import { Typography } from "@material-ui/core";
 import "./Timeline.css";
 
-export default function BasicTimeline({ title, children, icon }) {
+export default function CustomTimeline({ title, icon, children }) {
   return (
     <Timeline className={"timeline"}>
+      {/* Item Header */}
       <TimelineItem className={"timeline_firstItem"}>
         <TimelineSeparator>
           <TimelineDot className={"timeline_dot_header"}>{icon}</TimelineDot>
@@ -22,12 +23,7 @@ export default function BasicTimeline({ title, children, icon }) {
           </Typography>
         </TimelineContent>
       </TimelineItem>
-
       {children}
-      <TimelineSeparator className={"separator_padding"}>
-        <TimelineDot variant={"outlined"} className={"timeline_dot"} />
-        <TimelineConnector />
-      </TimelineSeparator>
     </Timeline>
   );
 }

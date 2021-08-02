@@ -1,6 +1,10 @@
 .timeline {
   padding: 0 !important;
 }
+/* header */
+
+/* header title */
+
 .timeline .timeline_header {
   padding-top: 7px;
 }
@@ -15,27 +19,28 @@
   display: none;
 }
 .timeline .timeline_dot_header {
-  background-color: var(--main-color);
-  color: white;
-  font-size: small;
-  padding: 2px;
+  background-color: var(--main-color) !important;
+  color: black !important;
+  font-size: small !important;
+  padding: 10px !important;
 }
+/* Remaining Item */
 .timeline .timeline_dot {
-  border-color: var(--main-color);
-  color: white;
+  border-color: var(--main-color) !important;
+  color: black !important;
   padding: 2px !important;
 }
 .timeline .MuiTimelineConnector-root {
   background-color: var(--main-color) !important;
 }
+.timeline .timeline_dot_header > .MuiSvgIcon-root {
+  color: black;
+  font-size: 20px;
+}
 .timeline .separator_padding {
-  padding: 18px !important;
+  padding-left: 18px !important;
 }
 .title .timeline_content {
   padding-top: 0px !important;
   margin-bottom: 20px;
-}
-.timeline .timeline_dot_header > .MuiSvgIcon-root {
-  color: white;
-  font-size: 20px;
 }

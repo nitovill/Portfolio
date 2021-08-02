@@ -9,7 +9,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fafafa;
   overflow: hidden;
-  background-image: url(./assets/images/bg-1.png);
+  background: url(./assets/images/bg-1.png);
 }
 
 code {

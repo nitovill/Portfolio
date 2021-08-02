@@ -25,5 +25,31 @@
 .profile_image img {
   width: 100%;
 }
+/* Information */
 .profile_information {
+  top: 0;
+  left: 0;
+  margin: -40px 10px 30px;
+}
+.profile_information .timeline .timeline_content {
+  margin-top: 2px;
+  margin-bottom: 12px;
+}
+.timelineItem_text {
+  font-size: 13.5px !important;
+  font-weight: 400 !important;
+  color: #787878 !important;
+}
+.timelineItem_text > a {
+  color: #787878 !important;
+  text-decoration: none;
+}
+.timelineItem_text > span {
+  color: black;
+}
+.profile .button_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }

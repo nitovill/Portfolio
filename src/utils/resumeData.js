@@ -1,5 +1,6 @@
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
+
 export default {
   name: "Mariano Villafuerte",
   title: "Full stack developer",
@@ -9,14 +10,14 @@ export default {
   phone: "+54 388 5162847",
   social: {
     Linkedin: {
-      link: "https://www.linkedin.com/feed/",
+      link: "https://www.linkedin.com/in/nelson-mariano-villafuerte/",
       icon: <LinkedInIcon />,
-      text: "hola",
+      text: "MyLinkedIn",
     },
     Github: {
       link: "https://github.com/nitovill",
       icon: <GitHubIcon />,
-      text: "hola",
+      text: "MyGithub",
     },
   },
 };
