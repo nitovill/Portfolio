@@ -13,19 +13,20 @@ import { Link, NavLink, withRouter } from "react-router-dom";
 import { HomeRounded, Telegram } from "@material-ui/icons";
 import resumeData from "../../utils/resumeData";
 import CustomBtn from "../Button/Button";
+import "./Header.css";
 
 const Header = (props) => {
   const pathName = props?.location?.pathname;
   return (
     <Navbar expand="lg" sticky="top" className="header">
-      <Nav.Link as={NavLink} to="/">
+      <Nav.Link as={NavLink} className="header_navlink" to="/">
         <Navbar.Brand className="header_home">
           <HomeRounded />
         </Navbar.Brand>
       </Nav.Link>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <Nav>
+        <Nav className="header_left">
           {/* Resume Link */}
           <Nav.Link
             as={NavLink}
