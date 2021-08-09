@@ -20,4 +20,6 @@ export default {
       text: "MyGithub",
     },
   },
+  about:
+    "Mi nombre es Mariano, soy Full Stack Developer y profesor de informática. Cuando cursaba el profesorado descubrí la programación y me enamoré, hice el examen de ingreso a la universidad nacional de Jujuy para adentrarme en este mundo y logré aprobar con nota perfecta (100). \n\n Mientras cursaba la carrera Analista Programador Universitario descubrí la programación web y supe que tenía que enfocarme en esto, mi sueño es trabajar de lo que tanto amo. \n\n Soy una persona introvertida, respeto las opiniones de los demás y doy a conocer la mia. Me gusta siempre aprender cosas nuevas.",
 };
