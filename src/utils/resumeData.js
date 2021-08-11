@@ -56,4 +56,32 @@ export default {
       description: "Profesorado en Informatica, Educación secundaria",
     },
   ],
+  skills: [
+    {
+      title: "FRONT-END",
+      description: [
+        "ReactJS",
+        "Javascript",
+        "Redux",
+        "HTML",
+        "CSS",
+        "MaterialUI",
+        "Bootstrap",
+      ],
+    },
+    {
+      title: "BACK -END",
+      description: [
+        "NodeJs",
+        "Javascript",
+        "Express",
+        "Firebase",
+        "TypeScript",
+      ],
+    },
+    {
+      title: "DATABASES",
+      description: ["Sequelize", "PostgreSQL", "MongoDB", "Mongoose", "MySQL"],
+    },
+  ],
 };

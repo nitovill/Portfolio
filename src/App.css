@@ -58,3 +58,9 @@
   left: 0;
   background-color: var(--main-color);
 }
+.graybg {
+  background-color: #fafafa;
+}
+.p_50 {
+  padding: 50px !important;
+}

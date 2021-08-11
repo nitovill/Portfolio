@@ -17,3 +17,28 @@
   font-size: small;
   margin-top: 6px;
 }
+.skills {
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 0px 48px 0px rgba(4, 6, 4, 0.08) !important;
+  min-height: 186px;
+  height: 100%;
+}
+.skills .skill_title {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 35px;
+}
+.skills .skill_description {
+  display: flex;
+  align-items: center;
+  color: #989898 !important;
+  font-weight: 400 !important;
+  line-height: 18px !important;
+}
+.skills .skill_description .timeline_dot {
+  background-color: var(--main-color) !important;
+  border-color: var(--main-color) !important;
+  padding: 2px;
+  margin-right: 5px !important;
+}

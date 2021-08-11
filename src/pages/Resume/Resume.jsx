@@ -1,8 +1,8 @@
 import React from "react";
 import "./Resume.css";
 import { Grid } from "@material-ui/core";
-import { Typography } from "@material-ui/core";
-import { TimelineItem, TimelineContent } from "@material-ui/lab";
+import { Typography, Paper } from "@material-ui/core";
+import { TimelineItem, TimelineContent, TimelineDot } from "@material-ui/lab";
 import CustomTimeline, {
   CustomTimelineSeparator,
 } from "../../components/Timeline/Timeline";
@@ -26,7 +26,7 @@ const Resume = () => {
         </Grid>
       </Grid>
       {/* Education and experiences */}
-      <Grid container className="section">
+      <Grid container className="section pb_45">
         <Grid item className="section_title mb_30">
           <span></span>
           <h6 className="section_title_text">Resume</h6>
@@ -85,7 +85,34 @@ const Resume = () => {
         </Grid>
       </Grid>
       {/* Skills */}
-      <Grid container className="section"></Grid>
+
+      <Grid item className="section_title mb_30">
+        <span></span>
+        <h6 className="section_title_text">Skills</h6>
+      </Grid>
+
+      <Grid
+        container
+        spacing={3}
+        justify="space-between"
+        className="section graybg pb_45 p_50"
+      >
+        {resumeData.skills.map((skill) => (
+          <Grid item xs={12} sm={6} md={3}>
+            <Paper elevation={0} className="skills">
+              <Typography variant="h6" className="skill_title">
+                {skill.title}
+              </Typography>
+              {skill.description.map((e) => (
+                <Typography variant="body2" className="skill_description">
+                  <TimelineDot variant={"outlined"} className="timeline_dot" />
+                  {e}
+                </Typography>
+              ))}
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
       {/* Contact */}
       <Grid container className="section"></Grid>
     </>
