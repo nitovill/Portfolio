@@ -26,6 +26,7 @@
 }
 /* Remaining Item */
 .timeline .timeline_dot {
+  background-color: var(--main-color);
   border-color: var(--main-color) !important;
   color: black !important;
   padding: 2px !important;
@@ -34,7 +35,7 @@
   background-color: var(--main-color) !important;
 }
 .timeline .timeline_dot_header > .MuiSvgIcon-root {
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 20px;
 }
 .timeline .separator_padding {

@@ -80,7 +80,7 @@ const Header = (props) => {
     <Navbar expand="lg" sticky="top" className="header">
       <Nav.Link as={NavLink} className="header_navlink" to="/">
         <Navbar.Brand className="header_home">
-          <HomeRounded />
+          <HomeRounded style={{ color: "white" }} />
         </Navbar.Brand>
       </Nav.Link>
       <Navbar.Toggle />
@@ -169,7 +169,7 @@ const Header = (props) => {
                   type="submit"
                   variant="contained"
                 >
-                  Send
+                  <span className="btn_text">Send</span>
                 </Button>
               </form>
             </div>

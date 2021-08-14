@@ -4,7 +4,7 @@ import "./Profile.css";
 import myImage from "../../assets/images/download.png";
 import CustomTimeline, { CustomTimelineSeparator } from "../Timeline/Timeline";
 import resumeData from "../../utils/resumeData";
-import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
+import PersonIcon from "@material-ui/icons/Person";
 import TimelineContent from "@material-ui/lab/TimelineContent";
 import TimelineItem from "@material-ui/lab/TimelineItem";
 import CustomBtn from "../Button/Button";
@@ -43,7 +43,7 @@ const Profile = () => {
         <img src={myImage} alt="hola" />
       </figure>
       <div className="profile_information">
-        <CustomTimeline icon={<PersonOutlineIcon />}>
+        <CustomTimeline icon={<PersonIcon />}>
           <CustomTimeLineItem title="Name" text={resumeData.name} />
           <CustomTimeLineItem title="Title" text={resumeData.title} />
           <CustomTimeLineItem title="Email" text={resumeData.email} />

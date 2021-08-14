@@ -2,7 +2,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 
 export default {
-  name: "Mariano Villafuerte",
+  name: "Nito Villafuerte",
   title: "Full stack developer",
   cumpleaños: "30 de Octubre, 1995",
   email: "nitovillafuerte@outlook.com",

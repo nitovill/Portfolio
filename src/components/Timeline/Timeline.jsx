@@ -15,7 +15,6 @@ export default function CustomTimeline({ title, icon, children }) {
       <TimelineItem className={"timeline_firstItem"}>
         <TimelineSeparator>
           <TimelineDot className={"timeline_dot_header"}>{icon}</TimelineDot>
-          <TimelineConnector />
         </TimelineSeparator>
         <TimelineContent>
           <Typography variant="h6" className={"timeline_header"}>
@@ -30,6 +29,5 @@ export default function CustomTimeline({ title, icon, children }) {
 export const CustomTimelineSeparator = () => (
   <TimelineSeparator className={"separator_padding"}>
     <TimelineDot variant={"outlined"} className={"timeline_dot"} />
-    <TimelineConnector />
   </TimelineSeparator>
 );

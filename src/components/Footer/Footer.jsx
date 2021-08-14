@@ -11,9 +11,9 @@ const Footer = () => {
       </div>
       <div className="fotter_right">
         <Typography className="footer_coopyright">
-          Designed and Developed by{" "}
-          <a href="/" target="_blank">
-            Mariano Villafuerte
+          Developed with{" "}
+          <a href="/" target="_blank" style={{ color: "brown" }}>
+            Material UI, React and Firebase
           </a>
           <br />
         </Typography>
