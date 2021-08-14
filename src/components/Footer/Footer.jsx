@@ -17,7 +17,11 @@ const Footer = () => {
           Developed with
           <a
             href="https://github.com/nitovill/portfolio"
-            style={{ color: "brown", paddingLeft: "10px" }}
+            style={{
+              color: "brown",
+              paddingLeft: "10px",
+              textDecoration: "none",
+            }}
           >
             Material UI, React and Firebase
           </a>

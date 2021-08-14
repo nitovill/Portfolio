@@ -57,7 +57,10 @@ const Profile = () => {
           ))}
         </CustomTimeline>
         <div className="button_container">
-          <a href="https://media-exp1.licdn.com/dms/document/C4E1FAQGX5kAzOKuJgw/feedshare-document-pdf-analyzed/0/1628370431749?e=1629068400&v=beta&t=OEYUUpHJhBXpEmt_XJ0krKGcDmOj_aJU8NKuvsDiY3A">
+          <a
+            href="https://media-exp1.licdn.com/dms/document/C4E1FAQGX5kAzOKuJgw/feedshare-document-pdf-analyzed/0/1628370431749?e=1629068400&v=beta&t=OEYUUpHJhBXpEmt_XJ0krKGcDmOj_aJU8NKuvsDiY3A"
+            style={{ textDecoration: "none" }}
+          >
             <CustomBtn text={"Download CV"} icon={<GetAppIcon />}></CustomBtn>
           </a>
         </div>

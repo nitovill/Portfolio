@@ -21,7 +21,7 @@ export default {
     },
   },
   about:
-    "Mi nombre es Mariano, soy Full Stack Developer y profesor de informática. Cuando cursaba el profesorado descubrí la programación y me enamoré, hice el examen de ingreso a la universidad nacional de Jujuy para adentrarme en este mundo y logré aprobar con nota perfecta (100). \n\n Mientras cursaba la carrera Analista Programador Universitario descubrí la programación web y supe que tenía que enfocarme en esto, mi sueño es trabajar de lo que tanto amo. \n\n Soy una persona introvertida, respeto las opiniones de los demás y doy a conocer la mia. Me gusta siempre aprender cosas nuevas.",
+    "My name is Mariano, I am a Full Stack Developer and a computer science teacher. When I was studying the teaching staff I discovered programming and fell in love, I took the entrance exam to the National University of Jujuy to enter this world and I managed to pass with a perfect grade (100).\n\n While I was studying the University Programmer Analyst I discovered web programming and I knew that I had to focus on this, my dream is to work on what I love so much.\n\nI am an introverted person, I respect the opinions of others and I make my own known. I always like to learn new things.",
   experiences: [
     {
       title: "FULL STACK DEVELOPER - Experiencia academica 'Trakker'",

@@ -28,9 +28,9 @@ const Portfolio = () => {
               Trakker
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Miembro del equipo de desarrollo de una SPA de hotel que permite
-              reservar, publicar y gestionar el alquiler de inmuebles, entre
-              otras cosas. • React, Redux, CSS puro, Material Ui, MercadoPago,
+              Member of the development team of a hotel SPA that allows to
+              reserve, publish and manage the rental of properties, among other
+              things. • React, Redux, CSS puro, Material Ui, MercadoPago,
               Node.Js, Mongoose, MongoDB, Firebase, SCRUM, GitHub, Typescript,
               etc.
             </Typography>
@@ -53,10 +53,10 @@ const Portfolio = () => {
               Hey Bulldog!
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Desarrollo individual de una SPA de razas de perros, consume datos
-              de una API (api.thedogapi.com) a través de un Back End
-              desarrollado por mí agregando funcionalidades a la API original. •
-              React, Redux, CSS puro, Node.Js, Mongoose, MongoDB.
+              My first individual development of a SPA for dog breeds, consumes
+              data from an API (api.thedogapi.com) through a Back End developed
+              by me adding functionalities to the original API. • React, Redux,
+              CSS puro, Node.Js, Mongoose, MongoDB.
             </Typography>
           </CardContent>
         </Card>
