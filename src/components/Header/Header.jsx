@@ -1,15 +1,7 @@
-import React from "react";
-import {
-  Button,
-  Form,
-  FormControl,
-  Container,
-  Nav,
-  Navbar,
-  NavDropdown,
-} from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Nav, Navbar } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Link, NavLink, withRouter } from "react-router-dom";
+import { NavLink, withRouter } from "react-router-dom";
 import { HomeRounded, Telegram } from "@material-ui/icons";
 import resumeData from "../../utils/resumeData";
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,10 +9,9 @@ import { Modal, TextField } from "@material-ui/core";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
 import "./Header.css";
-import CustomBtn from "../Button/Button";
-import sgMail from "@sendgrid/mail";
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
-
+import { db } from "../firebase";
+/* import Swal from "sweetalert2";
+ */
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: "flex",
@@ -38,6 +29,44 @@ const useStyles = makeStyles((theme) => ({
 const Header = (props) => {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    db.collection("contacts")
+      .add({
+        name,
+        email,
+        message,
+      })
+      .then(() => {
+        /* Swal.fire({
+          title: "Saved!",
+          text: "Your message was sent!",
+          icon: "success",
+          background: "white",
+          confirmButtonColor: "#06141c",
+          iconColor: "#06141c",
+        }); */
+        alert("Your message was sent!");
+      })
+      .catch((error) => {
+        /* Swal.fire({
+          title: "",
+          text: "Your message was sent!",
+          icon: "error",
+          background: "white",
+          confirmButtonColor: "#06141c",
+          iconColor: "#06141c",
+        }); */
+        alert("Error!");
+      });
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
+
   const pathName = props?.location?.pathname;
   const handleOpen = () => {
     setOpen(true);
@@ -46,24 +75,7 @@ const Header = (props) => {
   const handleClose = () => {
     setOpen(false);
   };
-  const Submit = () => {
-    console.log("hola");
-    const msg = {
-      to: "nitovillafuerte@outlook.com",
-      from: "nitovillafuerte@outlook.com", // aqui hay que poner el correo de la pag
-      subject: "Trekker Rent",
-      text: "Gracias por confiar en trekker!",
-      html: "<h2>Gracias por confiar en trekker!</h2>",
-    };
-    sgMail
-      .send(msg)
-      .then(() => {
-        console.log("Email sent");
-      })
-      .catch((error) => {
-        console.error(console.log(error));
-      });
-  };
+
   return (
     <Navbar expand="lg" sticky="top" className="header">
       <Nav.Link as={NavLink} className="header_navlink" to="/">
@@ -78,7 +90,7 @@ const Header = (props) => {
           <Nav.Link
             as={NavLink}
             to="/"
-            className={pathName == "/" ? "header_link_active" : "header_link"}
+            className={pathName === "/" ? "header_link_active" : "header_link"}
           >
             Resume
           </Nav.Link>
@@ -87,7 +99,7 @@ const Header = (props) => {
             as={NavLink}
             to="/portfolio"
             className={
-              pathName == "/portfolio" ? "header_link_active" : "header_link"
+              pathName === "/portfolio" ? "header_link_active" : "header_link"
             }
           >
             Portfolio
@@ -95,7 +107,11 @@ const Header = (props) => {
         </Nav>
         <div className="header_right">
           {Object.keys(resumeData.social).map((key) => (
-            <a href={resumeData.social[key].link} target="_blank">
+            <a
+              href={resumeData.social[key].link}
+              target="_blank"
+              rel="noreferrer"
+            >
               {resumeData.social[key].icon}
             </a>
           ))}
@@ -123,14 +139,39 @@ const Header = (props) => {
           <Fade in={open}>
             <div className={classes.paper}>
               <h6>Contact Form</h6>
-              <div style={{ paddingBottom: "25px" }}>
-                <TextField fullWidth name="name" label="Name" />
-                <TextField fullWidth name="email" label="E-mail" />
-                <TextField fullWidth name="message" label="Message" />
-              </div>
+              <form onSubmit={handleSubmit} style={{ paddingBottom: "25px" }}>
+                <TextField
+                  fullWidth
+                  name="name"
+                  label="Name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <TextField
+                  fullWidth
+                  name="email"
+                  value={email}
+                  label="E-mail"
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <TextField
+                  fullWidth
+                  name="message"
+                  label="Message"
+                  multiline
+                  value={message}
+                  rows={4}
+                  onChange={(e) => setMessage(e.target.value)}
+                />
 
-              <CustomBtn text="Submit" onClick={Submit} />
-              <button onClick={Submit}></button>
+                <Button
+                  className="custom_btn"
+                  type="submit"
+                  variant="contained"
+                >
+                  Send
+                </Button>
+              </form>
             </div>
           </Fade>
         </Modal>
