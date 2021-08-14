@@ -10,9 +10,15 @@ const Footer = () => {
         <Typography className="footer_name">{resumeData.name}</Typography>
       </div>
       <div className="fotter_right">
-        <Typography className="footer_coopyright">
-          Developed with{" "}
-          <a href="/" target="_blank" style={{ color: "brown" }}>
+        <Typography
+          style={{ display: "flex", alignItems: "center" }}
+          className="footer_coopyright"
+        >
+          Developed with
+          <a
+            href="https://github.com/nitovill/portfolio"
+            style={{ color: "brown", paddingLeft: "10px" }}
+          >
             Material UI, React and Firebase
           </a>
           <br />
