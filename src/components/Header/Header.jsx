@@ -162,6 +162,7 @@ const Header = (props) => {
                   value={message}
                   rows={4}
                   onChange={(e) => setMessage(e.target.value)}
+                  style={{ marginBottom: "8px" }}
                 />
 
                 <Button
